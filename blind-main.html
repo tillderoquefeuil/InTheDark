@@ -1,0 +1,181 @@
+<html>
+    <head>
+        <title>Le defi de Bati pour Benjamin</title>
+    </head>
+
+    <!-- 
+        COLORS :
+        bg          : #03232a
+        gradient    : #fa5437 -> #fa7d50
+        gradient    : #fa7135 -> #fba650
+        gradient    : #fcb652 -> #fdd27d
+        gradient    : #fdce33 -> #fddf50
+        gradient    : #feeb44 -> #fef261
+     -->
+
+    <style>
+        body {
+            background: #03232a;
+            display: flex;
+        }
+
+        .container {
+            display: flex;
+            margin: auto;
+        }
+
+        .emoji {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: relative;
+            margin: 10px;
+        }
+        
+        .emoji:nth-of-type(1) {
+            background: linear-gradient(to right, #fa5437, #fa7d50);
+        }
+        .emoji:nth-of-type(1) > .face {
+            top: 60px;
+        }
+        
+        .emoji:nth-of-type(2) {
+            background: linear-gradient(to right, #fa7135, #fba650);
+        }
+        .emoji:nth-of-type(2) > .face {
+            top: 53px;
+        }
+        
+        .emoji:nth-of-type(3) {
+            background: linear-gradient(to right, #fcb652, #fdd27d);
+        }
+        .emoji:nth-of-type(3) > .face {
+            top: 46px;
+        }
+        
+        .emoji:nth-of-type(4) {
+            background: linear-gradient(to right, #fdce33, #fddf50);
+        }
+        .emoji:nth-of-type(4) > .face {
+            top: 39px;
+        }
+        
+        .emoji:nth-of-type(5) {
+            background: linear-gradient(to right, #feeb44, #fef261);
+        }
+        .emoji:nth-of-type(5) > .face {
+            top: 32px;
+        }
+
+        .face {
+            position: absolute;
+            left: 25px;
+            width: 70px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @keyframes blink {
+            0%   {transform: scaleY(1);}
+            5%  {transform: scaleY(0.2);}
+            10%  {transform: scaleY(1);}
+            100% {transform: scaleY(1);}
+        }
+
+        .eyes {
+            height: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .eyes > span {
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background: #03232a;
+            animation: blink 5s linear 0s infinite;
+        }
+
+        .mouth {
+            width: 10px;
+            height: 5px;
+            border: 5px solid #03232a;
+        }
+
+        .neutral {
+            width: 20px;
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 0;
+        }
+
+        .very {
+            background: #03232a;
+        }
+
+        .sad {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom: 0;
+        }
+        
+        .happy {
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-top: 0;
+        }
+    </style>
+
+    <body>
+        <div class="container">
+            <div class="emoji">
+                <div class="face">
+                    <div class="eyes">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="mouth very sad"></div>
+                </div>
+            </div>
+            <div class="emoji">
+                <div class="face">
+                    <div class="eyes">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="mouth sad"></div>
+                </div>
+            </div>
+            <div class="emoji">
+                <div class="face">
+                    <div class="eyes">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="mouth neutral"></div>
+                </div>
+            </div>
+            <div class="emoji">
+                <div class="face">
+                    <div class="eyes">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="mouth happy"></div>
+                </div>
+            </div>
+            <div class="emoji">
+                <div class="face">
+                    <div class="eyes">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="mouth very happy"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
